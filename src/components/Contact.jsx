@@ -1,8 +1,8 @@
 import React from "react";
 
-function Contact() {
+function Contact(props) {
   return (
-    <>
+    <div className="contact" style={{backgroundColor: props.mode === 'dark'? '#69696e': 'white', color: props.mode ==='dark'?'white':'black'}}>
       <h1>Contact Us</h1>
       <p>You can contact us at the Email:- akashj.vasava@gmail.com</p>
       <p>
@@ -35,7 +35,7 @@ function Contact() {
           https://github.com/Akash9119
         </a>
       </p>
-    </>
+    </div>
   );
 }
 

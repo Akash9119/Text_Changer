@@ -2,7 +2,7 @@ import React from 'react';
 
 function About(props) {
   return (
-    <div className='mx-3'>
+    <div className='mx-3' style={{backgroundColor: props.mode === 'dark'? '#69696e': 'white', color: props.mode ==='dark'?'white':'black'}}>
       <h2 className="mb-4">About Text Changer</h2>
       <p>
         Text Changer is a simple utility website that allows you to manipulate and modify text in various ways. Whether you need to convert text case, remove duplicates, add prefixes or suffixes, or perform other text transformations, Text Changer has got you covered.
