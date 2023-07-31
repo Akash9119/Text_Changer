@@ -1,76 +1,31 @@
-import React, { useState } from 'react'
+import React from 'react';
 
-function About() {
-
-    const [mystyle, setMyStyle] = useState({
-        color:'black',
-        backgroundColor:'white',
-        border: '1px solid black'
-    })
-    const [btnText, setBtnText] = useState("Unable Dark Mode");
-
-    const handleMode = () => {
-        if(mystyle.color === 'white'){
-            setMyStyle({
-                color:'black',
-                backgroundColor:'white',
-                border: '1px solid black'
-            })
-            setBtnText("Unable Dark Mode");
-        }
-        else{
-            setMyStyle({
-                color:'white',
-                backgroundColor:'black',
-                border: '1px solid white'
-            })
-            setBtnText("Unable Light Mode");
-        }
-    }
-
+function About(props) {
   return (
-    <div>
-            <div className="accordion" id="accordionExample" style={mystyle}>
-        <div className="accordion-item">
-            <h2 className="accordion-header">
-            <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style={mystyle}>
-                Accordion Item #1
-            </button>
-            </h2>
-            <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-            <div className="accordion-body" style={mystyle}>
-                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-            </div>
-            </div>
-        </div>
-        <div className="accordion-item">
-            <h2 className="accordion-header">
-            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style={mystyle}>
-                Accordion Item #2
-            </button>
-            </h2>
-            <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div className="accordion-body" style={mystyle}>
-                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-            </div>
-            </div>
-        </div>
-        <div className="accordion-item">
-            <h2 className="accordion-header">
-            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style={mystyle}>
-                Accordion Item #3
-            </button>
-            </h2>
-            <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div className="accordion-body" style={mystyle}>
-                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-            </div>
-            </div>
-        </div>
-        <button type="button" class="btn btn-secondary btn-outline-dark" onClick={handleMode}>{btnText}</button>
-        </div>
+    <div className='mx-3'>
+      <h2 className="mb-4">About Text Changer</h2>
+      <p>
+        Text Changer is a simple utility website that allows you to manipulate and modify text in various ways. Whether you need to convert text case, remove duplicates, add prefixes or suffixes, or perform other text transformations, Text Changer has got you covered.
+      </p>
+      <p>
+        Our mission is to make text manipulation easy and accessible to everyone. The user-friendly interface ensures that you can quickly apply changes to your text without any hassle.
+      </p>
+      <h3 className="mb-3">Key Features:</h3>
+      <ul>
+        <li>Text Case Conversion: Easily change the text to uppercase, lowercase, title case, or sentence case.</li>
+        <li>Remove Duplicates: Eliminate duplicate words or characters from your text.</li>
+        <li>Add Prefixes/Suffixes: Append or prepend text to your content for quick modifications.</li>
+        <li>Character Count: Find out the total number of characters, words, and lines in your text.</li>
+        <li>And more: Stay tuned for future updates as we add new features regularly.</li>
+      </ul>
+      <p>
+        We are committed to enhancing Text Changer based on user feedback and needs. If you have any suggestions or encounter any issues while using the website, feel free to get in touch with us.
+      </p>
+      <p>
+        Thank you for using Text Changer! We hope it simplifies your text manipulation tasks and saves you time.
+      </p>
     </div>
-  )
+  );
 }
 
-export default About
+export default About;
