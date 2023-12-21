@@ -20,6 +20,7 @@ To run this application locally, follow these steps:
 
 ## Screenshots
 
+![screencapture-text-changer-coral-vercel-app-2023-12-21-20_55_06](https://github.com/Akash9119/Text_Changer/assets/68374089/4db6190a-4aef-485d-a0a0-072b6593b525)
 
 
 ## How to Use
