@@ -1,0 +1,27 @@
+.contact {
+  padding: 2rem;
+  min-height: 80vh;
+}
+
+.contact h1 {
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.contact p {
+  margin: 1rem 0;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.contact a {
+  text-decoration: none;
+  color: darkblue;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.contact a:hover {
+  color: #00008b;
+  text-decoration: underline;
+}

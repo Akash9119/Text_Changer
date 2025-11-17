@@ -1,18 +1,27 @@
-import React from "react";
+import React from 'react'
 
-function Contact(props) {
+function Contact({ mode }) {
   return (
-    <div className="contact" style={{backgroundColor: props.mode === 'dark'? '#69696e': 'white', color: props.mode ==='dark'?'white':'black'}}>
+    <div
+      className="contact"
+      style={{
+        backgroundColor: mode === 'dark' ? '#69696e' : 'white',
+        color: mode === 'dark' ? 'white' : 'black',
+        minHeight: '80vh',
+        padding: '2rem'
+      }}
+    >
       <h1>Contact Us</h1>
-      <p>You can contact us at the Email:- akashj.vasava@gmail.com</p>
+      <p>You can contact us at the Email: <strong>akashj.vasava@gmail.com</strong></p>
       <p>
-        To connect with me on LinkedIn:-
+        To connect with me on LinkedIn:
         <a
           href="https://www.linkedin.com/in/akash-vasava/"
           style={{
             textDecoration: "none",
             color: "darkblue",
             fontWeight: "bold",
+            marginLeft: "0.5rem"
           }}
           target="_blank"
           rel="noopener noreferrer"
@@ -21,7 +30,7 @@ function Contact(props) {
         </a>
       </p>
       <p>
-        To see my GitHub:-
+        To see my GitHub:
         <a
           href="https://github.com/Akash9119"
           target="_blank"
@@ -29,6 +38,7 @@ function Contact(props) {
             textDecoration: "none",
             color: "darkblue",
             fontWeight: "bold",
+            marginLeft: "0.5rem"
           }}
           rel="noopener noreferrer"
         >
@@ -36,7 +46,7 @@ function Contact(props) {
         </a>
       </p>
     </div>
-  );
+  )
 }
 
-export default Contact;
+export default Contact
