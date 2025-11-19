@@ -2,22 +2,55 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Navbar(props) {
+  const isDark = props.mode === 'dark';
+
   return (
     <div>
-            <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
+            <nav 
+              className={`navbar navbar-expand-lg navbar-${props.mode}`}
+              style={{
+                backgroundColor: isDark ? '#0f1419' : '#ffffff',
+                borderBottom: `2px solid ${isDark ? 'rgba(124, 58, 237, 0.2)' : 'rgba(124, 58, 237, 0.1)'}`,
+                boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
+                transition: 'all 0.3s ease'
+              }}
+            >
         <div className="container-fluid">
-            <Link className="navbar-brand" to="/">{props.title}</Link>
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
+            <Link 
+              className="navbar-brand" 
+              to="/"
+              style={{
+                fontSize: '1.5rem',
+                fontWeight: '700',
+                background: 'linear-gradient(135deg, #00d4ff 0%, #7c3aed 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                transition: 'all 0.3s ease'
+              }}
+            >
+              {props.title}
+            </Link>
+            <button 
+              className="navbar-toggler" 
+              type="button" 
+              data-bs-toggle="collapse" 
+              data-bs-target="#navbarSupportedContent" 
+              aria-controls="navbarSupportedContent" 
+              aria-expanded="false" 
+              aria-label="Toggle navigation"
+              style={{
+                borderColor: isDark ? '#7c3aed' : '#7c3aed'
+              }}
+            >
+              <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
                 <Link className="nav-link" aria-current="page" to="/">Home</Link>
                 </li>
-                <li className="nav-item">
-                <Link className="nav-link" to="/about">About Us</Link>
-                </li>
+                
                 <li className="nav-item">
                 <Link className="nav-link" to="/contact">Contact Us</Link>
                 </li>
