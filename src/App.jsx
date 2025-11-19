@@ -8,9 +8,14 @@ import Contact from './components/Contact.jsx'
 import './App.css'
 
 function App() {
-  const [mode, setMode] = useState('light')
-  const [modeText, setModeText] = useState('Switch to Dark Mode')
+  const [mode, setMode] = useState('dark')
+  const [modeText, setModeText] = useState('Switch to Light Mode')
   const [alert, setAlert] = useState(null)
+
+  React.useEffect(() => {
+    // Set dark mode as default on initial load
+    document.body.style.background = 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)'
+  }, [])
 
   const showAlert = (message, type) => {
     setAlert({
@@ -26,13 +31,13 @@ function App() {
     if (mode === 'light') {
       setMode('dark')
       setModeText('Switch to Light Mode')
-      document.body.style.backgroundColor = '#69696e'
-      showAlert("Dark mode enabled!", "success")
+      document.body.style.background = 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)'
+      showAlert("🌙 Dark mode enabled!", "success")
     } else {
       setMode('light')
       setModeText('Switch to Dark Mode')
-      document.body.style.backgroundColor = 'white'
-      showAlert("Light mode enabled!", "success")
+      document.body.style.background = 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)'
+      showAlert("☀️ Light mode enabled!", "success")
     }
   }
 
